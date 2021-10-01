@@ -6,11 +6,12 @@ class CustomProcessor extends DisplayProcessor {
         return `${log}`;
     }
 }
-
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
 jasmine.getEnv().clearReporters();
 jasmine.getEnv().addReporter(new SpecReporter({
     spec: {
         displayStacktrace: StacktraceOption.NONE
+        
     },
     customProcessors: [CustomProcessor],
 }));

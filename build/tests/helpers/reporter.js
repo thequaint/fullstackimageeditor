@@ -26,6 +26,7 @@ var CustomProcessor = /** @class */ (function (_super) {
     };
     return CustomProcessor;
 }(jasmine_spec_reporter_1.DisplayProcessor));
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
 jasmine.getEnv().clearReporters();
 jasmine.getEnv().addReporter(new jasmine_spec_reporter_1.SpecReporter({
     spec: {

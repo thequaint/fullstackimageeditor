@@ -56,6 +56,18 @@ Feel free to attempt to create this project based on the overview and rubric spe
 
 Although not a requirement, we recommend using Git from the very beginning if you choose to build on your local environment or use the provided workspace. Make sure to commit often and to use well-formatted commit messages.
 
-## License
 
-[License](LICENSE.txt)
+**API format**
+http://localhost:3000/images/sant.jpg/900/900
+
+**Scripts**
+npm run build
+npm run start
+npm run test
+
+**Port**
+port number:3000
+
+**Other Instruction**
+use npm install to install node modules
+

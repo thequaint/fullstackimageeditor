@@ -11,3 +11,4 @@ app.use("/images", imageroutes_1.default);
 app.listen(port, function () {
     console.log("server started at localhost:" + port);
 });
+exports.default = app;
