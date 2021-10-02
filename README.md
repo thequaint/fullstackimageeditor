@@ -71,3 +71,17 @@ port number:3000
 **Other Instruction**
 use npm install to install node modules
 
+**Tools and Resources**
+Typescript
+
+Express for routers
+
+Jasmine- (Unit Testing)
+
+Eslint
+
+Prettierrc
+
+Sharp--For resizing the images.
+
+Supertest (For testing with Jasmine)
