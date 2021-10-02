@@ -1,12 +1,12 @@
-import express from "express";
-import imageroute from "./imageroutes";
+import express from 'express';
+import imageroute from './imageroutes';
 
-const app=express();
-const port=3000;
-app.use("/images",imageroute);
+const app = express();
+const port = 3000;
+app.use('/images', imageroute);
 
-app.listen(port, ()=> {
- console.log(`server started at localhost:${port}`)
+app.listen(port, () => {
+  console.log(`server started at localhost:${port}`);
 });
 
 export default app;
