@@ -1,12 +1,21 @@
 import express from 'express';
+
 import imageroute from './imageroutes';
+
+import des1 from 'server-destroy';
+
+import { Server } from 'http';
 
 const app = express();
 const port = 3000;
 app.use('/images', imageroute);
 
-app.listen(port, () => {
+var server=app.listen(port, () => {
   console.log(`server started at localhost:${port}`);
 });
 
-export default app;
+
+
+
+export default app ;
+
