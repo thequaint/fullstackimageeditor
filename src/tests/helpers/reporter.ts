@@ -10,7 +10,7 @@ class CustomProcessor extends DisplayProcessor {
     return `${log}`;
   }
 }
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 25000;
 jasmine.getEnv().clearReporters();
 jasmine.getEnv().addReporter(
   new SpecReporter({

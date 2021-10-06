@@ -1,14 +1,19 @@
-import sharp from 'sharp';
+import sharp, { bool } from 'sharp';
 import path from 'path';
 
-const sharp2 = (filename: string, width: number, height: number):void => {
-  sharp(path.join(__dirname, '../', filename))
+const sharp2 = (filename: string, width: number, height: number): void => {
+  
+  sharp(path.join(__dirname, '../src/cache', filename))
     .resize(width, height)
-    .toFile('output.jpg', function(err) {
-      console.log(err);
-      // output.jpg is a 300 pixels wide and 200 pixels high image
-      // containing a scaled and cropped version of input.jpg
+    .toFile(path.join(__dirname, '../src/cache', 'output.jpg'), function(err) {
+     
+      console.log(err, 'sharp2');
+     
+
     });
+    
+  
+
 };
 
 export default sharp2;
