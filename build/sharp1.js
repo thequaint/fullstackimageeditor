@@ -34,10 +34,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const sharp_1 = __importDefault(require("sharp"));
 const path_1 = __importStar(require("path"));
 const sharp1 = (filename) => __awaiter(void 0, void 0, void 0, function* () {
-    yield (0, sharp_1.default)(path_1.default.join(__dirname, '../images', filename))
-        .toFile(path_1.default.join(__dirname, '../src/cache', filename), (err) => {
+    yield (0, sharp_1.default)(path_1.default.join(__dirname, '../images', filename)).toFile(path_1.default.join(__dirname, '../src/cache', filename), err => {
         if (err) {
-            console.log(err, "sharp1 inside i am");
+            console.log(err, 'sharp1 inside i am');
         }
         else {
             (0, path_1.resolve)('ok');

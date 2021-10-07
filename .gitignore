@@ -1,2 +1,4 @@
 node_modules/
 package-lock.json/
+src/index.html/
+src/index.html

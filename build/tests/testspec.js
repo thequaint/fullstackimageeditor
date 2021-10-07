@@ -26,6 +26,8 @@ describe('Test endpoint responses', () => {
     it('check file generated asyc function', () => __awaiter(void 0, void 0, void 0, function* () {
         (0, sharp1_1.default)('ice.jpg');
         const b = path_1.default.join('C:/Users/DEvanshu/Desktop/project/starter/src/cache/ice.jpg');
-        return (0, filedexits1_1.fileExist1)(b).then(result => { expect(result).toBe('done1'); });
+        return (0, filedexits1_1.fileExist1)(b).then(result => {
+            expect(result).toBe('done1');
+        });
     }));
 });

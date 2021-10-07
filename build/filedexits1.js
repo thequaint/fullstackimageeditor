@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.fileExist1 = void 0;
 const fs_1 = __importDefault(require("fs"));
 function fileExist1(path) {
-    var promise = new Promise(function (resolve, reject) {
+    const promise = new Promise(function (resolve) {
         setTimeout(function () {
             try {
                 fs_1.default.accessSync(path);
