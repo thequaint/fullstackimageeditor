@@ -4,7 +4,6 @@ export function fileExist(path: string): boolean {
     fs.accessSync(path);
     return true;
   } catch (e) {
-    console.log(e);
     return false;
   }
 }
