@@ -8,74 +8,53 @@ import sharp1 from '../sharp1';
 import fs from 'fs';
 
 import path from 'path';
+
 import { fileExist } from '../fileexit';
 
+import sharp2 from '../sharp2';
+
+import {fileExist1} from '../filedexits1';
 
 describe('Test endpoint responses', () => {
 
   
 
 
-  it('gets the api endpoint', async (done) => {
-    
+  it('gets the api endpoint', async () => {
+     
     const request = supertest(app);
 
     const response = await request.get('/images/sant.jpg/900/900');
     
     expect(response.status).toBe(200);
 
-    done()
+    
 
   });
 
 
-  it('get function to genrate image chaeck',async ()  =>{
+ 
     
    
     
       
-      sharp1('ice.jpg');
-      
-      
-      
-      const b= path.join('C:/Users/DEvanshu/Desktop/project/starter/src/cache/ice.jpg');
-      
-      const c= fileExist(b);
-      console.log(c);
-      expect(c).toBe(true);
     
       
       
-        
-    })
-    it('get function to genrate image chaeck',async ()  =>{
-    
-   
-    
       
-      sharp1('ice.jpg');
-      
-      
-      
-      const b= path.join('C:/Users/DEvanshu/Desktop/project/starter/src/cache/ice.jpg');
-      
-      const c= fileExist(b);
-      console.log(c);
-      expect(c).toBe(true);
-    
-      
-      
-        
-    })
   
   
 
-  
+    it('check file generated asyc function',async ()  =>{
+      
+      sharp1('ice.jpg');
+      const b= path.join('C:/Users/DEvanshu/Desktop/project/starter/src/cache/ice.jpg');
+
+      return fileExist1(b).then(result=>{expect(result).toBe('done1');})
+           
+
+    })
   
 
   
 });
-
-
-
-
