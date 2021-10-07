@@ -26,7 +26,7 @@ describe('Test endpoint responses', () => {
     }));
     it('get function to genrate image chaeck', () => __awaiter(void 0, void 0, void 0, function* () {
         (0, sharp1_1.default)('ice.jpg');
-        const b = path_1.default.join(__dirname, '../images/sant.jpg');
+        const b = path_1.default.join('C:/Users/DEvanshu/Desktop/project/starter/images/sant.jpg');
         const c = (0, fileexit_1.fileExist)(b);
         console.log(c);
         expect(c).toBe(true);

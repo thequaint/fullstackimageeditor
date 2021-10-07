@@ -8,7 +8,7 @@ const imageroutes_1 = __importDefault(require("./imageroutes"));
 const app = (0, express_1.default)();
 const port = 3000;
 app.use('/images', imageroutes_1.default);
-const server = app.listen(port, () => {
+var server = app.listen(port, () => {
     console.log(`server started at localhost:${port}`);
 });
 exports.default = app;

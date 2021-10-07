@@ -37,8 +37,8 @@ describe('Test endpoint responses', () => {
       sharp1('ice.jpg');
       
       
-     
-      const b= path.join(__dirname, '../images/sant.jpg');
+      
+      const b= path.join('C:/Users/DEvanshu/Desktop/project/starter/src/cache/ice.jpg');
       
       const c= fileExist(b);
       console.log(c);
@@ -48,7 +48,25 @@ describe('Test endpoint responses', () => {
       
         
     })
-
+    it('get function to genrate image chaeck',async ()  =>{
+    
+   
+    
+      
+      sharp1('ice.jpg');
+      
+      
+      
+      const b= path.join('C:/Users/DEvanshu/Desktop/project/starter/src/cache/ice.jpg');
+      
+      const c= fileExist(b);
+      console.log(c);
+      expect(c).toBe(true);
+    
+      
+      
+        
+    })
   
   
 
