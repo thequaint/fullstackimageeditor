@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const supertest_1 = __importDefault(require("supertest"));
 const __1 = __importDefault(require(".."));
 const sharp1_1 = __importDefault(require("../sharp1"));
-const path_1 = __importDefault(require("path"));
 const filedexits1_1 = require("../filedexits1");
 describe('Test endpoint responses', () => {
     it('gets the api endpoint', () => __awaiter(void 0, void 0, void 0, function* () {
@@ -25,7 +24,7 @@ describe('Test endpoint responses', () => {
     }));
     it('check file generated asyc function', () => __awaiter(void 0, void 0, void 0, function* () {
         (0, sharp1_1.default)('ice.jpg');
-        const b = path_1.default.join('C:/Users/DEvanshu/Desktop/project/starter/src/cache/ice.jpg');
+        const b = 'ice.jpg';
         return (0, filedexits1_1.fileExist1)(b).then(result => {
             expect(result).toBe('done1');
         });

@@ -7,12 +7,18 @@ import fs from 'fs';
 
 const imageroute = express.Router();
 
-imageroute.get('/:filename/:width/:height', (req, res) => {
+imageroute.get('/:filename/:width/:height', (req, res): void => {
   const filename = req.params.filename;
   const width = +req.params.width;
   const height = +req.params.height;
   console.log(width, height);
-
+  async function getvalue(): Promise<void> {
+    const a = await sharp2(filename, width, height);
+    if (a == true) {
+      console.log('timeout in progress in cache', a);
+      res.sendFile(path.join(__dirname, '../src/cache', 'output.jpg'));
+    }
+  }
   if (isNaN(height) || height < 0) {
     res.send('Only provide positive number for height');
     return;
@@ -23,17 +29,14 @@ imageroute.get('/:filename/:width/:height', (req, res) => {
   }
 
   if (cache.get(filename)) {
-    sharp2(filename, width, height);
+   
+    // res.setTimeout(5000, () => {
 
-    res.setTimeout(5000, () => {
-      console.log('timeout in progress in cache');
-
-      res.sendFile(path.join(__dirname, '../src/cache', 'output.jpg'));
-    });
+    // });
+    getvalue();
   } else {
     fs.access(path.join(__dirname, '../images', filename), err => {
       if (err) {
-
         res.send('File Not exist,Enter correct file name');
         return;
       }

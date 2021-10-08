@@ -4,7 +4,7 @@ import app from '..';
 
 import sharp1 from '../sharp1';
 
-import path from 'path';
+
 
 import { fileExist1 } from '../filedexits1';
 
@@ -19,9 +19,7 @@ describe('Test endpoint responses', () => {
 
   it('check file generated asyc function', async () => {
     sharp1('ice.jpg');
-    const b = path.join(
-      'C:/Users/DEvanshu/Desktop/project/starter/src/cache/ice.jpg'
-    );
+    const b = 'ice.jpg';
 
     return fileExist1(b).then(result => {
       expect(result).toBe('done1');
