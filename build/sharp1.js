@@ -15,9 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const sharp_1 = __importDefault(require("sharp"));
 const path_1 = __importDefault(require("path"));
 const sharp1 = (filename) => __awaiter(void 0, void 0, void 0, function* () {
-    return new Promise((resolve) => {
-        return (0, sharp_1.default)(path_1.default.join(__dirname, '../images', filename))
-            .toFile(path_1.default.join(__dirname, '../src/cache', filename), (err) => {
+    return new Promise(resolve => {
+        return (0, sharp_1.default)(path_1.default.join(__dirname, '../images', filename)).toFile(path_1.default.join(__dirname, '../src/cache', filename), err => {
             if (err != null) {
                 console.log(err);
                 resolve(false);
