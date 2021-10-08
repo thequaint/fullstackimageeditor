@@ -7,7 +7,7 @@ import fs from 'fs';
 
 const imageroute = express.Router();
 
-imageroute.get('/:filename/:width/:height', (req, res): void => {
+imageroute.get('/:filename/:width/:height', (req:express.Request, res:express.Response): void => {
   const filename = req.params.filename;
   const width = +req.params.width;
   const height = +req.params.height;
