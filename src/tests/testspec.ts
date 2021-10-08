@@ -4,8 +4,6 @@ import app from '..';
 
 import sharp1 from '../sharp1';
 
-
-
 import { fileExist1 } from '../filedexits1';
 
 describe('Test endpoint responses', () => {

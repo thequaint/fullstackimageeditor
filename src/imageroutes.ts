@@ -29,7 +29,6 @@ imageroute.get('/:filename/:width/:height', (req, res): void => {
   }
 
   if (cache.get(filename)) {
-   
     // res.setTimeout(5000, () => {
 
     // });
